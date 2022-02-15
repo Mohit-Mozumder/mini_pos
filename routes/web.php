@@ -21,6 +21,11 @@ Route::get('users', function () {
     return view('users/users');
 });
 
-Route::get('groups', function () {
-    return view('groups/groups');
-});
+// Route::get('groups', function () {
+//     return view('groups/groups');
+// });
+
+// Route::get('groups','UsersController@index') ;
+
+Route::get('/groups','App\Http\Controllers\UserGroupsController@index');
+Route::get('/groups/create','App\Http\Controllers\UserGroupsController@create');
