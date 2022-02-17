@@ -12,10 +12,18 @@
 
     <div class="card-body">
 
- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quibusdam facere, minima cumque
- soluta aliquam iusto laboriosam quia, fugit eius ipsum debitis repellendus aperiam adipisci 
- sapiente fugiat nihil rerum recusandae?
-        
+        <form method="POST" action="{{url('groups')}}">
+            @csrf
+            <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="title" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Group Title">
+               
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
     </div>
 </div>
 

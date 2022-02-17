@@ -6,15 +6,15 @@
 <div class="row clearflix">
 
     <div class="col md-6">
-          <div class="col-md-6"></div>
-           
-     <h2>User Group</h2>
+        <div class="col-md-6"></div>
+
+        <h2>User Group</h2>
 
     </div>
 
     <div class="col md-6 text-right">
 
-        <a class="btn btn-info" href="{{url('groups/create')}}" >New group</a>
+        <a class="btn btn-info" href="{{url('groups/create')}}">New group</a>
 
     </div>
 
@@ -51,8 +51,14 @@
                     <tr>
                         <td>{{ $group->id   }}</td>
                         <td>{{ $group->title}}</td>
-                        <td>
-                            <a href="" class="btn btn-danger">delete</a>
+
+                        <td class="text-right">
+                            <form method="POST" action=" {{ url ('groups/'. $group->id)}} ">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fa fa-trash"></i>Delete</button>
+                            </form>
                         </td>
 
                     </tr>

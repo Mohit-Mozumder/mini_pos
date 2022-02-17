@@ -314,6 +314,14 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                   
+                @if(session('message'))
+
+                   <div class="alert alert-success" role="alert">
+                       {{ session('message') }}
+                   </div>
+
+                @endif
 
                     <!-- Page Heading -->
                     @yield('main_content')

@@ -29,3 +29,5 @@ Route::get('users', function () {
 
 Route::get('/groups','App\Http\Controllers\UserGroupsController@index');
 Route::get('/groups/create','App\Http\Controllers\UserGroupsController@create');
+Route::post('groups','App\Http\Controllers\UserGroupsController@store');
+Route::delete('groups/{id}','App\Http\Controllers\UserGroupsController@destroy');
